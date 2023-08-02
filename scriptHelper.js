@@ -48,29 +48,29 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         alert("Please do not enter numbers for name of pilot or co-pilot");
     } 
     else {
-        pilotStatus.innerHTML = `Pilot ${pilot} is ready`;
-        copilotStatus.innerHTML = `Co-pilot ${copilot} is ready`;
+        pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
+        copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
 
         if (fuelLevel < 10000 && cargoLevel > 100000) { //Not required but added anyways since it is a possible scenario
             list.style.visibility = "visible";
             cargoStatus.innerHTML = "Cargo mass too heavy for launch";
             fuelStatus.innerHTML = "Fuel level too low for launch";
-            launchStatus.innerHTML = "Shuttle not ready for launch";
-            launchStatus.style.color = "red";
+            launchStatus.innerHTML = "Shuttle Not Ready for Launch";
+            launchStatus.style.color = "rgb(199, 37, 78)";
         }
         else if(fuelLevel < 10000) {
             fuelStatus.innerHTML = "Fuel level too low for launch";
             cargoStatus.innerHTML = "Cargo mass low enough for launch";
             list.style.visibility = "visible";
-            launchStatus.innerHTML = "Shuttle not ready for launch";
+            launchStatus.innerHTML = "Shuttle Not Ready for Launch";
             launchStatus.style.color = "red";
         }
         else if (cargoLevel > 100000) {
             list.style.visibility = "visible";
             cargoStatus.innerHTML = "Cargo mass too heavy for launch";
             fuelStatus.innerHTML = "Fuel level high enough for launch";
-            launchStatus.innerHTML = "Shuttle not ready for launch";
-            launchStatus.style.color = "#C7254E";
+            launchStatus.innerHTML = "Shuttle Not Ready for Launch";
+            launchStatus.style.color = "rgb(199, 37, 78)";
         }
         else {
             launchStatus.innerHTML = "Shuttle is Ready for Launch";
