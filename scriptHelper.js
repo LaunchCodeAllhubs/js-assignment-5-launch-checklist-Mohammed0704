@@ -42,10 +42,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         alert("All fields are required");
     }
     else if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
-        alert("Please enter numerical values for Fuel Level and Cargo Mass");
+        alert("Please enter number values for Fuel Level and Cargo Mass");
     }
     else if (validateInput(pilot)=== "Is a Number"||validateInput(copilot)=== "Is a Number") {
-        alert("Please do not enter numbers for name of pilot or co-pilot");
+        alert("Please do not enter number values for pilot or co-pilot");
     } 
     else {
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
