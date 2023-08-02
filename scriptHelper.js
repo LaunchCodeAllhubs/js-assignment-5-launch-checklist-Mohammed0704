@@ -63,7 +63,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             cargoStatus.innerHTML = "Cargo mass low enough for launch";
             list.style.visibility = "visible";
             launchStatus.innerHTML = "Shuttle Not Ready for Launch";
-            launchStatus.style.color = "red";
+            launchStatus.style.color = "rgb(199, 37, 78)";
         }
         else if (cargoLevel > 100000) {
             list.style.visibility = "visible";
