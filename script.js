@@ -2,10 +2,11 @@
 
 window.addEventListener("load", function() {
     const form = document.querySelector("form");
+    let list = document.getElementById('faultyItems');
+    list.style.visibility = 'hidden';
     form.addEventListener("submit", (event)=>{
         event.preventDefault();
         //List DOM
-        let list = document.getElementById('faultyItems');
         let pilot = document.querySelector("input[name=pilotName]").value;
         let copilot = document.querySelector("input[name=copilotName]").value;
         let fuelLevel = document.querySelector("input[name=fuelLevel]").value;
